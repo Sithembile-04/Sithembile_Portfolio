@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sithembile Thandekile Ndlela - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px 35px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            border-bottom: 3px solid #8b4789;
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #8b4789;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info strong {
+            margin-right: 4px;
+            color: #8b4789;
+        }
+
+        .personal-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #8b4789;
+            text-transform: uppercase;
+            border-bottom: 2px solid #d4a5d4;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-content {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px 12px;
+            font-size: 12px;
+        }
+
+        .skills-grid span {
+            color: #555;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .skills-grid span:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b4789;
+            font-weight: bold;
+        }
+
+        .job-entry {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .job-entry:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .company {
+            font-size: 12px;
+            color: #8b4789;
+            font-weight: 600;
+        }
+
+        .duration {
+            font-size: 11px;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        .responsibilities {
+            margin-top: 5px;
+            padding-left: 18px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 3px;
+            color: #555;
+            line-height: 1.4;
+            font-size: 12px;
+        }
+
+        .job-status {
+            font-size: 11px;
+            color: #888;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        .education-item p {
+            margin-bottom: 2px;
+            color: #555;
+        }
+
+        .cert-label {
+            font-weight: 700;
+            color: #333;
+        }
+
+        .reference-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        .reference-item p {
+            margin-bottom: 2px;
+            color: #555;
+        }
+
+        .reference-name {
+            font-weight: 700;
+            color: #8b4789;
+        }
+
+        .project-entry {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-entry:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .project-desc {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .tech-stack {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .cert-entry {
+            margin-bottom: 6px;
+        }
+
+        .cert-name {
+            font-weight: 700;
+            color: #333;
+            font-size: 12px;
+        }
+
+        .cert-details {
+            font-size: 11px;
+            color: #666;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 15px 25px;
+                max-width: 100%;
+            }
+
+            .header {
+                padding-bottom: 8px;
+                margin-bottom: 10px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+                margin-bottom: 3px;
+            }
+
+            .section {
+                margin-bottom: 10px;
+            }
+
+            .section-title {
+                font-size: 13px;
+                padding-bottom: 3px;
+                margin-bottom: 6px;
+            }
+
+            .job-entry, .project-entry {
+                margin-bottom: 8px;
+                padding-bottom: 6px;
+            }
+
+            .responsibilities li {
+                margin-bottom: 2px;
+                line-height: 1.3;
+            }
+
+            .skills-grid {
+                gap: 3px 10px;
+            }
+
+            .contact-info,
+            .personal-details {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SITHEMBILE THANDEKILE NDLELA</h1>
+            
+            <div class="contact-info">
+                <span><strong>Cell:</strong> 060 653 0531</span>
+                <span><strong>Email:</strong> tozindlela@gmail.com</span>
+                <span><strong>LinkedIn:</strong> linkedin.com/in/sithembile-thandekile-8697132bb</span>
+            </div>
+
+            <div class="personal-details">
+                <span><strong>Address:</strong> 275 Dr Yusuf Dadoo Rd., Greyville, Durban 4001</span>
+                <span><strong>DOB:</strong> 06/10/2004</span>
+                <span><strong>Gender:</strong> Female</span>
+                <span><strong>Nationality:</strong> South African</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Profile</div>
+            <div class="section-content">
+                Final-year Bachelor of ICT (Internet of Things) student with hands-on experience in retail operations, 
+                customer service, and inventory management. Demonstrated expertise in developing IoT systems for healthcare, 
+                environmental monitoring, and disaster management. Certified in AI fundamentals and responsible AI practices. 
+                Seeking opportunities to leverage technical skills and customer-facing experience in innovative technology roles.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <span>Customer Service</span>
+                <span>IoT Development</span>
+                <span>Python Programming</span>
+                <span>Team Collaboration</span>
+                <span>Inventory Management</span>
+                <span>AI & Machine Learning</span>
+                <span>Problem-Solving</span>
+                <span>Time Management</span>
+                <span>Point of Sale (POS)</span>
+                <span>Cloud Computing</span>
+                <span>Communication</span>
+                <span>Cybersecurity</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="job-entry">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Retail Assistant (Part-Time)</div>
+                        <div class="company">Sizakancane Tuckshop</div>
+                    </div>
+                    <div class="duration">2020 - Present (5 Years)</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Deliver exceptional customer service by assisting customers with product selection, answering queries, and ensuring positive shopping experiences</li>
+                    <li>Manage counter operations including accurate cash handling, transaction processing, and maintaining balanced till records</li>
+                    <li>Oversee inventory management through stock replenishment, product organization, and monitoring stock levels to prevent shortages</li>
+                    <li>Maintain store hygiene and visual merchandising standards, ensuring clean and organized product displays</li>
+                </ul>
+                <div class="job-status">Status: Current Position</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Academic Projects</div>
+            
+            <div class="project-entry">
+                <div class="project-title">MedMonitor: IoT-Based Intelligent Medication Management System</div>
+                <div class="project-desc">
+                    Developed an automated healthcare inventory system with biometric security, QR/barcode medication registration, 
+                    temperature monitoring, and real-time expiry alerts. Led team collaboration for IoT sensor integration and 
+                    cloud-based monitoring dashboard.
+                </div>
+                <div class="tech-stack">Technologies: ESP32, Arduino, Python, Node.js, Firebase, MySQL, DHT22 Sensor, Fingerprint Authentication</div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-title">Smart Waste Management System</div>
+                <div class="project-desc">
+                    Created ML-powered waste collection optimization system with real-time bin monitoring, GPS tracking, and predictive 
+                    analytics. Achieved 20% fuel cost reduction and 95% overflow prevention through route optimization algorithms.
+                </div>
+                <div class="tech-stack">Technologies: NodeMCU, Ultrasonic Sensors, Python, Pandas, Folium, Machine Learning (ARIMA, Random Forest)</div>
+            </div>
+
+            <div class="project-entry">
+                <div class="project-title">IoT-Based Smart Flood Alert System</div>
+                <div class="project-desc">
+                    Designed proactive disaster management framework with real-time water level monitoring, automated SMS/email alerts, 
+                    and remote-controlled drainage system. Integrated AI chatbot for flood safety guidance and weather API.
+                </div>
+                <div class="tech-stack">Technologies: Arduino, Water Level Sensors, Node.js, MongoDB, SMS API, Cloud Deployment (Onrender)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education & Qualifications</div>
+            <div class="education-grid">
+                <div class="education-item">
+                    <p><span class="cert-label">Bachelor of Information & Communication Technology</span></p>
+                    <p><strong>Specialization:</strong> Internet of Things (IoT)</p>
+                    <p>Durban University of Technology</p>
+                    <p>Final Year Student (Expected Graduation: 2025)</p>
+                    <p style="margin-top: 8px;"><span class="cert-label">National Senior Certificate (Matric)</span></p>
+                    <p>Sahlumbe High School - 2022</p>
+                    <p>Achievement: 73% in English (FAL) - September 2022</p>
+                </div>
+                <div class="education-item">
+                    <p><span class="cert-label">AI Certifications (2025):</span></p>
+                    <div class="cert-entry">
+                        <p class="cert-name">AI Fundamentals</p>
+                        <p class="cert-details">Durban University of Technology - May 2025</p>
+                    </div>
+                    <div class="cert-entry">
+                        <p class="cert-name">Generative AI</p>
+                        <p class="cert-details">Durban University of Technology - June 2025</p>
+                    </div>
+                    <div class="cert-entry">
+                        <p class="cert-name">Search Technology</p>
+                        <p class="cert-details">Durban University of Technology - June 2025</p>
+                    </div>
+                    <div class="cert-entry">
+                        <p class="cert-name">Responsible AI</p>
+                        <p class="cert-details">Durban University of Technology - June 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="section-content">
+                <p style="margin-bottom: 6px;"><strong>Programming Languages:</strong> Python, JavaScript/Node.js, C/C++</p>
+                <p style="margin-bottom: 6px;"><strong>IoT Platforms:</strong> ESP32, Arduino, Raspberry Pi, NodeMCU</p>
+                <p style="margin-bottom: 6px;"><strong>Databases:</strong> Firebase, MySQL, MongoDB</p>
+                <p style="margin-bottom: 6px;"><strong>Machine Learning:</strong> Pandas, NumPy, Scikit-learn, Data Analytics</p>
+                <p><strong>Languages:</strong> IsiZulu (Native), English (Fluent)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">References</div>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <p class="reference-name">Mr. V Sthole</p>
+                    <p>Educator</p>
+                    <p>Sahlumbe High School</p>
+                    <p><strong>Tel:</strong> 076 691 2687</p>
+                </div>
+                <div class="reference-item">
+                    <p class="reference-name">Ms. C Ndlovu</p>
+                    <p>Student</p>
+                    <p>Durban University of Technology</p>
+                    <p><strong>Tel:</strong> 076 570 1559</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="margin-bottom: 0;">
+            <div class="section-title">Additional Information</div>
+            <div class="section-content">
+                <p style="margin-bottom: 4px;"><strong>Health Status:</strong> Excellent</p>
+                <p style="margin-bottom: 4px;"><strong>Criminal Record:</strong> Clear</p>
+                <p style="margin-bottom: 4px;"><strong>Availability:</strong> Immediate</p>
+                <p><strong>Work Status:</strong> Open to full-time opportunities upon graduation (2025)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
